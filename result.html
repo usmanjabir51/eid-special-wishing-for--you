@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Eid Wish</title>
+
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#7873f5">
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+<body class="result-page">
+
+  <div class="overlay"></div>
+
+  <div class="card" id="card">
+    <h2>🌙 Eid Mubarak</h2>
+
+    <div class="main" id="type"></div>
+
+    <div class="eid">
+      <p>ussy kehna keh bin tery bohat eidain guzaarii hain.</p>
+      <p>is baar to milny aa jao suna hy eid aai hy 🌙</p>
+    </div>
+
+    <button onclick="shareWhatsApp()">📤 Share with Friends</button>
+    <button onclick="downloadImage()">🖼️ Download Wish</button>
+    <button onclick="goBack()">⬅ Back</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

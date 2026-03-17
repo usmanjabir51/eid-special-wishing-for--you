@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+}
+
+/* Home page background slider */
+.home-page {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: bgSlider 15s infinite ease-in-out;
+}
+
+@keyframes bgSlider {
+  0% {
+    background-image: url('1.eid.webp');
+  }
+  25% {
+    background-image: url('2.eid.webp');
+  }
+  50% {
+    background-image: url('eid-special.webp');
+  }
+  75% {
+    background-image: url('4.eid.webp');
+  }
+  100% {
+    background-image: url('1.eid.webp');
+  }
+}
+
+/* Result page background */
+.result-page {
+  background-image: url('result-eid.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Shared glass card style */
+.box,
+.card {
+  position: relative;
+  z-index: 2;
+  width: 90%;
+  max-width: 420px;
+  padding: 28px;
+  border-radius: 22px;
+  backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.13);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 14px;
+  margin-bottom: 18px;
+  opacity: 0.95;
+}
+
+input {
+  width: 100%;
+  padding: 13px 14px;
+  margin: 10px 0;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  font-size: 15px;
+}
+
+button {
+  width: 100%;
+  padding: 13px;
+  margin-top: 12px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(45deg, #ff6ec4, #7873f5);
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+button:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.45);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -110%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+button:hover::before {
+  left: 100%;
+}
+
+.main {
+  margin: 18px 0;
+  font-size: 16px;
+  line-height: 1.6;
+  min-height: 90px;
+}
+
+.eid {
+  padding: 14px;
+  border-left: 3px solid white;
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+  font-style: italic;
+  margin-top: 14px;
+}
+
+.eid p {
+  margin: 8px 0;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .box,
+  .card {
+    padding: 22px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .main {
+    font-size: 15px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}

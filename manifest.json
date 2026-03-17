@@ -1,0 +1,10 @@
+{
+  "name": "Eid Special Wishing For You",
+  "short_name": "Eid Wish",
+  "description": "A beautiful Eid wish generator to create and share festive wishes.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#16a34a",
+  "orientation": "portrait"
+}
